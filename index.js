@@ -1,6 +1,7 @@
 require('dotenv').config()
 const express =require ("express");
-const app = express()
+const app = express();
+const cors  =require("cors");
 const path = require("path");
 const collection =require("./src/db/index.js")
 
@@ -8,7 +9,7 @@ const jwt =require("jsonwebtoken")
 const cookieparser=require("cookie-parser");
 const bcryptjs=require("bcryptjs")
 
-
+app.use(cors())
 app.use(express.json());
 app.use(cookieparser());
 app.use(express.urlencoded({extended:false}))
