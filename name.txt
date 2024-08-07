@@ -1,0 +1,4 @@
+aartii2531 -name
+1xYh6XZ9Y6BLvFl7-paass
+
+mongodb+srv://aartii2531:<password>@cluster0.bcqcjzq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
