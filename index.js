@@ -2,7 +2,8 @@ require('dotenv').config()
 const express =require ("express");
 const app = express()
 const path = require("path");
-const collection=require("./db/index.js");
+const collection =require("./src/db/index.js")
+
 const jwt =require("jsonwebtoken")
 const cookieparser=require("cookie-parser");
 const bcryptjs=require("bcryptjs")
@@ -21,7 +22,7 @@ async function compare(userpassword,hashpass){
     const res = await bcryptjs.compare(userpassword,hashpass)
     return res
    }
-const temppath = path.join(__dirname,"../public");
+const temppath = path.join(__dirname,"./public");
 app.use(express.static(temppath))
 app.set("view engine","hbs");
 
