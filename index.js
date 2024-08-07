@@ -8,8 +8,14 @@ const collection =require("./src/db/index.js")
 const jwt =require("jsonwebtoken")
 const cookieparser=require("cookie-parser");
 const bcryptjs=require("bcryptjs")
-
-app.use(cors())
+const corsConfig={
+    origin:"*",
+    Credential:true,
+    methods:["GET","POST","PUT","DELETE"],
+};
+app.options("",cors(corsConfig));
+app.use(cors(corsConfig
+    ))
 app.use(express.json());
 app.use(cookieparser());
 app.use(express.urlencoded({extended:false}))
